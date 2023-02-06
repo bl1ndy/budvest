@@ -7,6 +7,9 @@ import Rails from "@rails/ujs"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "jquery"
+import "@popperjs/core"
+import "bootstrap/js/dist/dropdown"
+import "bootstrap/js/dist/collapse"
 
 Rails.start()
 ActiveStorage.start()
