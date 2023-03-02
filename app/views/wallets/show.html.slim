@@ -1,0 +1,9 @@
+h1 = @wallet.name
+
+div
+  = link_to t('.buttons.back'), wallets_path, class: 'btn btn-sm btn-secondary'
+  = link_to t('.buttons.edit'), edit_wallet_path(@wallet), class: 'btn btn-sm btn-warning mx-1'
+  = button_to t('.buttons.delete'),
+    @wallet,
+    method: :delete, data: { confirm: t('.confirmation') },
+    class: 'btn btn-sm btn-danger', form: { class: 'd-inline-block' }

@@ -1,0 +1,8 @@
+h1 = t('.header.title')
+
+.my-3
+  = link_to t('.buttons.new'), new_wallet_path, class: 'btn btn-primary'
+
+- @wallets.each do |wallet|
+  div
+    = link_to wallet.name, wallet
