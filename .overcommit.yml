@@ -1,0 +1,15 @@
+PreCommit:
+  RuboCop:
+    enabled: true
+    command: ["bundle", "exec", "rubocop"]
+    on_warn: fail
+
+  SlimLint:
+    enabled: true
+    on_warn: fail
+
+PrePush:
+  RSpec:
+    enabled: true
+    command: ["bundle", "exec", "rspec"]
+    on_warn: fail
