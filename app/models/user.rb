@@ -8,4 +8,5 @@ class User < ApplicationRecord
          :confirmable
 
   has_many :wallets, dependent: :destroy
+  has_many :categories, dependent: :destroy
 end

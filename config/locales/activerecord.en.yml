@@ -1,6 +1,9 @@
 en:
   activerecord:
     attributes:
+      category:
+        category_type: Category type
+        name: Name
       user:
         email: Email
         name: Name
@@ -10,5 +13,6 @@ en:
         name: Name
 
     models:
+      category: Category
       user: User
       wallet: Wallet
