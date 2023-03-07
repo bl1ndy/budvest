@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @categories = current_user.categories
+    @categories = current_user.categories.order(:created_at)
   end
 
   def show

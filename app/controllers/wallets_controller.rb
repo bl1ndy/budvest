@@ -4,7 +4,7 @@ class WalletsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @wallets = current_user.wallets
+    @wallets = current_user.wallets.order(:created_at)
   end
 
   def show
