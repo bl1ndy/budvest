@@ -7,7 +7,7 @@ feature 'Authenticated user can delete the wallet', :js do
   given!(:wallet) { create(:wallet, user:) }
 
   describe 'Authenticated user' do
-    before do
+    background do
       sign_in(user)
       visit wallet_path(wallet)
     end

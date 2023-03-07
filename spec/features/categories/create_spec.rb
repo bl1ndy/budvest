@@ -4,9 +4,10 @@ require 'rails_helper'
 
 feature 'Authenticated user can create new category' do
   given(:user) { create(:user) }
+  given!(:category) { create(:category, user:) }
 
   describe 'Authenticated user' do
-    before do
+    background do
       sign_in(user)
       visit root_path
       click_link 'Categories'
@@ -21,10 +22,17 @@ feature 'Authenticated user can create new category' do
       expect(page).to have_content('Test category')
     end
 
-    scenario 'sees errors if invalid data provided' do
+    scenario 'sees errors if provides blank name' do
       click_button 'Create'
 
       expect(page).to have_content("Name can't be blank")
+    end
+
+    scenario 'sees errors if provides already used name' do
+      fill_in :category_name, with: category.name
+      click_button 'Create'
+
+      expect(page).to have_content('Name has already been taken')
     end
   end
 

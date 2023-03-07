@@ -8,7 +8,7 @@ feature 'Authenticated user can see the list of all own wallets' do
   given!(:another_wallet) { create(:wallet, user: create(:user)) }
 
   describe 'Authenticated user' do
-    before { sign_in(user) }
+    background { sign_in(user) }
 
     scenario 'sees own wallets list' do
       visit root_path

@@ -8,7 +8,7 @@ feature 'Authenticated user can see the list of all own categories' do
   given!(:another_category) { create(:category, user: create(:user)) }
 
   describe 'Authenticated user' do
-    before { sign_in(user) }
+    background { sign_in(user) }
 
     scenario 'sees own categories list' do
       visit root_path

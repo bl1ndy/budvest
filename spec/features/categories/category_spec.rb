@@ -7,7 +7,7 @@ feature 'Authenticated user can see the page of own category' do
   given!(:category) { create(:category, user:) }
 
   describe 'Authenticated user' do
-    before do
+    background do
       sign_in(user)
       visit root_path
       click_link 'Categories'
