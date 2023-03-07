@@ -1,12 +1,8 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  sequence :name do |n|
-    "Wallet_#{n}"
-  end
-
   factory :wallet do
-    name
+    sequence(:name) { |n| "Wallet_#{n}" }
     user
 
     trait :invalid do
