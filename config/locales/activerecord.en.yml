@@ -3,6 +3,9 @@ en:
     attributes:
       category:
         category_type: Category type
+        category_types:
+          income: Income
+          spending: Spending
         name: Name
       user:
         email: Email

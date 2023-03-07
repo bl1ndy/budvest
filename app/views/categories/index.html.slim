@@ -1,0 +1,8 @@
+h1 = t('.header.title')
+
+.my-3
+  = link_to t('.buttons.new'), new_category_path, class: 'btn btn-primary'
+
+- @categories.each do |category|
+  div
+    = link_to category.name, category

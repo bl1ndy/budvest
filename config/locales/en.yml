@@ -1,11 +1,43 @@
 en:
+  categories:
+    create:
+      success: Category successfully created!
+    destroy:
+      success: Category successfully deleted!
+    edit:
+      header:
+        title: "Edit %{category_name}"
+    form:
+      buttons:
+        create: Create
+        update: Update
+    index:
+      buttons:
+        new: Create new category
+      header:
+        title: My Categories
+    new:
+      header:
+        title: New category
+    show:
+      buttons:
+        back: Back
+        delete: Delete
+        edit: Edit
+      confirmation: Are you sure?
+      type: "Type: %{category_type}"
+    update:
+      success: Category successfully updated!
+
   shared:
     menu:
       brand: Budvest
+      categories: Categories
       login: Log in
       logout: Log out
       signup: Sign up
       wallets: Wallets
+
   wallets:
     create:
       success: Wallet successfully created!
