@@ -4,8 +4,7 @@ require 'rails_helper'
 
 RSpec.describe WalletsController do
   let(:user) { create(:user) }
-  let(:wallet) { create(:wallet, user:) }
-  let(:another_wallet) { create(:wallet, user: create(:user)) }
+  let!(:wallet) { create(:wallet, user:) }
 
   describe 'GET #index' do
     context 'when user is authenticated' do
