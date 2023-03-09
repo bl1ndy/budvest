@@ -1,0 +1,43 @@
+.row.justify-content-center
+  .col-md-6
+    h1.my-5
+      = t('.title', resource: resource_name.to_s.humanize)
+
+    = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+      = render 'devise/shared/error_messages', resource:
+
+      .mb-3
+        = f.label :email, class: 'form-label'
+        = f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control'
+
+      - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+        = t('.confirm_waiting', email: resource.unconfirmed_email)
+
+      .mb-3
+        => f.label :password, class: 'form-label'
+        i = "(#{t('.leave_blank')})"
+        = f.password_field :password, autocomplete: 'new-password', class: 'form-control'
+
+      .mb-3
+        = f.label :password_confirmation, class: 'form-label'
+        = f.password_field :password_confirmation, autocomplete: 'new-password', class: 'form-control'
+
+      .mb-3
+        => f.label :current_password, class: 'form-label'
+        i = "(#{t('.current_password')})"
+        = f.password_field :current_password, autocomplete: 'current-password', class: 'form-control'
+
+      .mb-3
+        = f.submit t('.buttons.submit'), class: 'btn btn-primary'
+
+    .mt-5.alert.alert-danger
+      h2
+        = t('.danger')
+
+    => button_to t('.buttons.cancel'),
+                registration_path(resource_name),
+                data: { confirm: t('.confirm_cancel') }, method: :delete,
+                form: { class: 'd-inline' },
+                class: 'btn btn-danger'
+
+    = link_to t('.buttons.back'), :back, class: 'btn btn-secondary'
