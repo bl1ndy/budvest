@@ -6,6 +6,7 @@ RSpec.describe User do
   describe 'associations' do
     it { should have_many(:wallets).dependent(:destroy) }
     it { should have_many(:categories).dependent(:destroy) }
+    it { should have_many(:transactions).dependent(:destroy) }
   end
 
   describe 'validations' do
