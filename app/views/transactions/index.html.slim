@@ -1,0 +1,31 @@
+h1 = t('.header.title')
+
+.my-3
+  = link_to t('.buttons.new'), new_transaction_path, class: 'btn btn-primary'
+
+.table-responsive
+  table.table.table-hover
+    thead.table-success
+      tr
+        th scope="col"
+          = t('.table.created_at')
+        th scope="col"
+          = t('.table.wallet')
+        th scope="col"
+          = t('.table.category')
+        th scope="col"
+          = t('.table.amount')
+        th scope="col"
+          = t('.table.actions')
+    tbody
+      - @transactions.each do |transaction|
+        tr
+          th.fw-normal scope="row"
+            = transaction.created_at
+          td = transaction.wallet.name
+          td = transaction.category.name
+          td class="#{transaction.amount.positive? ? 'text-success' : 'text-danger'}"
+            = transaction.amount
+          td
+            => link_to t('.table.show'), transaction, class: 'btn btn-sm btn-info'
+            = link_to t('.table.edit'), edit_transaction_path(transaction), class: 'btn btn-sm btn-warning'

@@ -1,0 +1,19 @@
+h1
+  = t('.header.title', id: @transaction.id)
+
+.my-3
+  = t('.amount', amount: @transaction.amount)
+
+.my-3
+  = t('.wallet', wallet: @transaction.wallet.name)
+
+.my-3
+  = t('.category', category: @transaction.category.name)
+
+div
+  = link_to t('.buttons.back'), transactions_path, class: 'btn btn-sm btn-secondary'
+  = link_to t('.buttons.edit'), edit_transaction_path(@transaction), class: 'btn btn-sm btn-warning mx-1'
+  = button_to t('.buttons.delete'),
+    @transaction,
+    method: :delete, data: { confirm: t('.confirmation') },
+    class: 'btn btn-sm btn-danger', form: { class: 'd-inline-block' }

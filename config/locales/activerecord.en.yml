@@ -7,6 +7,8 @@ en:
           income: Income
           spending: Spending
         name: Name
+      transaction:
+        amount: Amount
       user:
         email: Email
         name: Name
@@ -17,5 +19,6 @@ en:
 
     models:
       category: Category
+      transaction: Transaction
       user: User
       wallet: Wallet

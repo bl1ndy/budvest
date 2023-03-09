@@ -5,7 +5,9 @@ FactoryBot.define do
     amount { BigDecimal('100') }
 
     user
-    wallet
-    category
+
+    trait :invalid do
+      amount { 0 }
+    end
   end
 end

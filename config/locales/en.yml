@@ -38,6 +38,49 @@ en:
       signup: Sign up
       wallets: Wallets
 
+  transactions:
+    create:
+      success: Transaction successfully created!
+    destroy:
+      success: Transaction successfully deleted!
+    edit:
+      header:
+        title: "Edit Transaction %{id}"
+    form:
+      buttons:
+        back: Back
+        create: Create
+        update: Update
+    index:
+      buttons:
+        new: Create new transaction
+      header:
+        title: My Transactions
+      table:
+        actions: Actions
+        amount: Amount
+        category: Category
+        created_at: Created
+        edit: Edit
+        show: Show
+        wallet: Wallet
+    new:
+      header:
+        title: New transaction
+    show:
+      amount: "Amount: %{amount}"
+      buttons:
+        back: Back
+        delete: Delete
+        edit: Edit
+      category: "Category: %{category}"
+      confirmation: Are you sure?
+      header:
+        title: "Transaction #%{id}"
+      wallet: "Wallet: %{wallet}"
+    update:
+      success: Transaction successfully updated!
+
   wallets:
     create:
       success: Wallet successfully created!
