@@ -3,13 +3,11 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import Rails from "@rails/ujs"
-import * as ActiveStorage from "@rails/activestorage"
-import "channels"
-import "jquery"
-import "@popperjs/core"
-import "bootstrap/js/dist/dropdown"
-import "bootstrap/js/dist/collapse"
+import Rails from "@rails/ujs";
+import * as ActiveStorage from "@rails/activestorage";
+import "jquery";
+import "bootstrap/js/dist/dropdown";
+import "bootstrap/js/dist/collapse";
 
-Rails.start()
-ActiveStorage.start()
+Rails.start();
+ActiveStorage.start();
