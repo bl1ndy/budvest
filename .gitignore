@@ -40,7 +40,6 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-.solargraph.yml
 /coverage
 
 /app/assets/builds/*

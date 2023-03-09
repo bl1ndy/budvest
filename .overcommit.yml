@@ -6,6 +6,7 @@ PreCommit:
 
   SlimLint:
     enabled: true
+    command: ["bundle", "exec", "slim-lint"]
     on_warn: fail
 
 PrePush:

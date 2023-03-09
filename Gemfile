@@ -28,11 +28,15 @@ end
 group :development do
   gem 'letter_opener', '~> 1.8', '>= 1.8.1'
   gem 'listen', '~> 3.3'
+  gem 'overcommit', '~> 0.60.0'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'rubocop', '~> 1.30', '>= 1.30.1', require: false
   gem 'rubocop-performance', '~> 1.14', '>= 1.14.2', require: false
   gem 'rubocop-rails', '~> 2.14', '>= 2.14.2', require: false
   gem 'rubocop-rspec', '~> 2.12', '>= 2.12.1', require: false
+  gem 'slim_lint', '~> 0.24.0'
+  gem 'solargraph', '~> 0.48.0'
+  gem 'solargraph-rails', '~> 1.1'
   gem 'web-console', '>= 4.1.0'
 end
 
