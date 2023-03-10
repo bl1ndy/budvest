@@ -2,7 +2,7 @@ h1
   = t('.header.title', id: @transaction.id)
 
 .my-3
-  = t('.amount', amount: @transaction.amount)
+  = t('.amount', amount: format('%.2f', @transaction.amount))
 
 .my-3
   = t('.wallet', wallet: @transaction.wallet.name)

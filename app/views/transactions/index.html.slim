@@ -25,7 +25,7 @@ h1 = t('.header.title')
           td = transaction.wallet.name
           td = transaction.category.name
           td class="#{transaction.amount.positive? ? 'text-success' : 'text-danger'}"
-            = transaction.amount
+            = format('%.2f', transaction.amount)
           td
             => link_to t('.table.show'), transaction, class: 'btn btn-sm btn-info'
             = link_to t('.table.edit'), edit_transaction_path(transaction), class: 'btn btn-sm btn-warning'

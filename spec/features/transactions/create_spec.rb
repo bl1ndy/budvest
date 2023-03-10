@@ -31,6 +31,7 @@ feature 'Authenticated user can create new transaction' do
     end
 
     scenario 'sees errors if provides blank amount' do
+      fill_in :transaction_amount, with: ''
       click_button 'Create'
 
       expect(page).to have_content('Amount is not a number')
