@@ -8,6 +8,7 @@ ruby '3.2.1'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'cssbundling-rails'
 gem 'devise', '~> 4.8', '>= 4.8.1'
+gem 'foreman', '~> 0.87.2'
 gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails', '~> 4.5'
 gem 'jsbundling-rails'
