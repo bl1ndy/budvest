@@ -44,7 +44,12 @@ RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include FeatureHelpers, type: :feature
 
-  Capybara.javascript_driver = :selenium_chrome_headless
+  Capybara.configure do |c|
+    c.server_host = '0.0.0.0'
+    c.server_port = 4000
+    c.app_host = 'http://web:4000'
+    c.javascript_driver = :headless_selenium_chrome_in_container
+  end
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = Rails.root.join('/spec/fixtures')

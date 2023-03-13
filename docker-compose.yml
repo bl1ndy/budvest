@@ -9,6 +9,8 @@ services:
       - db_data:/var/lib/postgresql/data
 
   web:
+    depends_on:
+      - database
     image: budvest
     ports:
       - "3000:3000"
@@ -20,6 +22,16 @@ services:
     volumes:
       - .:/budvest
       - bundle_cache:/bundle_cache
+
+  selenium_chrome:
+    depends_on:
+      - database
+      - web
+    image: selenium/standalone-chrome-debug
+    logging:
+      driver: none
+    ports:
+      - "5900:5900"
 
 volumes:
   db_data:

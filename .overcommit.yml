@@ -8,9 +8,3 @@ PreCommit:
     enabled: true
     command: ["bundle", "exec", "slim-lint"]
     on_warn: fail
-
-PrePush:
-  RSpec:
-    enabled: true
-    command: ["bundle", "exec", "rspec"]
-    on_warn: fail
