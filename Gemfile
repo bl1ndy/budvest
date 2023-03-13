@@ -27,7 +27,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'letter_opener', '~> 1.8', '>= 1.8.1'
+  gem 'letter_opener_web', '~> 2.0'
   gem 'listen', '~> 3.3'
   gem 'overcommit', '~> 0.60.0'
   gem 'rack-mini-profiler', '~> 2.0'
