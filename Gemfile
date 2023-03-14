@@ -29,7 +29,6 @@ end
 group :development do
   gem 'letter_opener_web', '~> 2.0'
   gem 'listen', '~> 3.3'
-  gem 'overcommit', '~> 0.60.0'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'rubocop', '~> 1.30', '>= 1.30.1', require: false
   gem 'rubocop-performance', '~> 1.14', '>= 1.14.2', require: false
